@@ -1,0 +1,30 @@
+package com.ccg.jtapi.client;
+import com.cisco.jtapi.extensions.CiscoTerminal;
+/*   
+*  THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESSED OR IMPLIED WARRANTIES,
+*  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+*  FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL JCRAFT,
+*  INC. OR ANY CONTRIBUTORS TO THIS SOFTWARE BE LIABLE FOR ANY DIRECT, INDIRECT,
+*  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+*  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,
+*  OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+*  LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+*  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+*  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+public class DeviceType {
+	
+	private String Type="";
+	
+	public String getPhoneType(CiscoTerminal observedTerminal){
+		String v = observedTerminal.getTypeName();
+		if (v.contains("6921")||v.contains("6941")
+		  ||v.contains("7941")||v.contains("7942")||v.contains("7961")||
+		    v.contains("7962")||v.contains("7970")||v.contains("7975")){
+			Type= "ThirdGen";
+		}else{
+			Type= "ForthGen";
+		}
+		return Type;		  
+	}	  
+}
