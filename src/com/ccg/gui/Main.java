@@ -69,8 +69,8 @@ public class Main extends JFrame {
 	   panelcredentialsPanel.setBorder(BorderFactory.createTitledBorder("Credentials"));
 		try {
 	    	  usernametxtf = new JTextField("jtapi"); 
-	    	  passwordtxtf = new JPasswordField("Demolab1!");
-	    	  servertxtf = new JTextField("cucm11.ccg.local");
+	    	  passwordtxtf = new JPasswordField("");
+	    	  servertxtf = new JTextField("");
 	    	  srctxtf = new JTextField("5001");
 	    	  desttxtf = new JTextField("5900");
 	    	  
